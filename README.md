@@ -1,22 +1,28 @@
 # spring-cloud-configserver
-1.添加spring-cloud-config服务端包依赖
-	<dependency>
+
+spring-cloud配置中心。
+
+**1.添加spring-cloud-config服务端包依赖 **
+```
+<dependency>
 		<groupId>org.springframework.cloud</groupId>
 		<artifactId>spring-cloud-config-server</artifactId>
-	</dependency>
+</dependency>
+```
 
-2.启动类添加@EnableConfigServer注解
-	@EnableConfigServer
-	@SpringBootApplication
-	public class ConfigserverApplication {
-
+**2.启动类添加@EnableConfigServer注解 **
+```
+@EnableConfigServer
+@SpringBootApplication
+public class ConfigserverApplication {
 		public static void main(String[] args) {
 			SpringApplication.run(ConfigserverApplication.class, args);
 		}
+}
+```
 
-	}
-
-3.修改配置文件
+**3.修改配置文件 **
+```
 #端口
 server.port=8888
 #应用名
@@ -39,3 +45,4 @@ spring.cloud.config.label=master
 #spring.cloud.config.server.git.username=admin
 #访问git仓库的用户密码 如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写
 #spring.cloud.config.server.git.password=123456
+```

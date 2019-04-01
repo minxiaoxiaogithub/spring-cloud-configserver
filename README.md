@@ -4,6 +4,7 @@
 	<groupId>org.springframework.cloud</groupId>
 	<artifactId>spring-cloud-config-server</artifactId>
 </dependency>
+
 2.启动类添加@EnableConfigServer注解
 @EnableConfigServer
 @SpringBootApplication
@@ -14,6 +15,7 @@ public class ConfigserverApplication {
 	}
 
 }
+
 3.修改配置文件
 #端口
 server.port=8888
